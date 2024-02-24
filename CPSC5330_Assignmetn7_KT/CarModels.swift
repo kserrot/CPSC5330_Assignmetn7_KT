@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct CarModels{
+    var cars: String
+    var modelc: String
+    
+    init(cars: String, _ modelc: String) {
+        self.cars = cars
+        self.modelc = modelc
+    }
+}
