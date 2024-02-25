@@ -16,7 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         CarModels(cars: "Bugatti", "Chiron"),
         CarModels(cars: "Pagani", "Huayra"),
         CarModels(cars: "McLaren", "Senna"),
-        CarModels(cars: "Koenigsegg", "Regera")
+        CarModels(cars: "Koenigsegg", "Regera"),
+        CarModels(cars: "BMW", "M5CS"),
+        CarModels(cars: "Mercedes-Benz", "SLR McLaren"),
+        CarModels(cars: "McLaren", "F1")
     ]
     
     @IBOutlet weak var tableView: UITableView!

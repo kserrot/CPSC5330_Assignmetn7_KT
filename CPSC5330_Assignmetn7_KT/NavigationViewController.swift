@@ -8,18 +8,23 @@
 import UIKit
 
 class NavigationViewController: UIViewController {
+
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var background: UIImageView!
     
     var selectedCar: CarModels?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         label.text = selectedCar != nil ? "\(selectedCar!.cars) - \(selectedCar!.modelc)" : ""
-        //label.frame = CGRect(x: 100, y: 100, width: 300, height: 100)
-        //label.numberOfLines = 3
-        //label.textAlignment = .center
+        if let carModel = selectedCar?.modelc.lowercased() {
+            background.image = UIImage(named: carModel)
+        }
         view.addSubview(label)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true)
     }
 }
